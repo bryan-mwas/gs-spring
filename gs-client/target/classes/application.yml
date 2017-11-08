@@ -1,0 +1,8 @@
+logging:
+  level:
+    hello: INFO
+    org:
+      springframework:
+        ws: DEBUG
+server:
+  port: 4201
