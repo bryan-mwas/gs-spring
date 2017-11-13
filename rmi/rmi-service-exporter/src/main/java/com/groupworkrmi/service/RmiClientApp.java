@@ -1,6 +1,6 @@
-package com.groupworkrmi.client;
+package com.groupworkrmi.service;
 
-import com.groupworkrmi.client.order.OrderService;
+import com.groupworkrmi.service.order.OrderService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,9 +21,9 @@ public class RmiClientApp {
     public RmiProxyFactoryBean exporter() throws UnknownHostException {
         RmiProxyFactoryBean rmiProxyFactoryBean = new RmiProxyFactoryBean();
         rmiProxyFactoryBean.setServiceInterface(OrderService.class);
-//        String hostAddress = Inet4Address.getLocalHost()
-//                                         .getHostAddress();
-        rmiProxyFactoryBean.setServiceUrl("rmi://localhost:2099/OrderService");
+        String hostAddress = Inet4Address.getLocalHost()
+                                         .getHostAddress();
+        rmiProxyFactoryBean.setServiceUrl(String.format("rmi://%s:2099/OrderService", hostAddress));
         return rmiProxyFactoryBean;
     }
 

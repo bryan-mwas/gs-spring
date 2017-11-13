@@ -5,4 +5,4 @@ logging:
       springframework:
         ws: DEBUG
 server:
-  port: 4201
+  port: 3000

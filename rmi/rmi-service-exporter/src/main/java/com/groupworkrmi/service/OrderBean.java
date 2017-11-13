@@ -1,7 +1,7 @@
-package com.groupworkrmi.client;
+package com.groupworkrmi.service;
 
-import com.groupworkrmi.client.order.Order;
-import com.groupworkrmi.client.order.OrderService;
+import com.groupworkrmi.service.order.Order;
+import com.groupworkrmi.service.order.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

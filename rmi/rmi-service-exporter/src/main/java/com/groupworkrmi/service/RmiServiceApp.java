@@ -23,6 +23,7 @@ public class RmiServiceApp {
         rmiServiceExporter.setService(orderService());
         rmiServiceExporter.setServiceInterface(OrderService.class);
         rmiServiceExporter.setRegistryPort(2099);
+        rmiServiceExporter.setAlwaysCreateRegistry(true);
         return rmiServiceExporter;
     }
 
